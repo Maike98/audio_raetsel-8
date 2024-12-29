@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio-Rätsel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .tip {
+            display: none;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+	img {
+       	 max-width: 150%;
+         height: auto;
+         margin-top: 10px;
+    }
+    .tip img {
+        width: 200px; /* Bildbreite anpassen */
+        height: auto; /* Automatische Höhe für Proportionen */
+    }
+    </style>
+    <script>
+        function showTip(id) {
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Audio-Rätsel</h1>
+    <p>Höre dir die Musik an und sortiere die Stücke nach Filmen!</p>
+
+    <!-- Audio-Player -->
+    <audio controls>
+        <source src="https://www.dropbox.com/scl/fi/1xmwc0ltzi0koe6kfqzw1/8.m4a?rlkey=yjjzt4a9jevwqce5frayomoh6&dl=1" type="audio/mpeg">
+        Dein Browser unterstützt keine Audio-Wiedergabe.
+    </audio>
+
+    <!-- Tipp-Buttons und Felder, immer unter dem Audio-Player -->
+    <div>
+        <button onclick="showTip('tip1')">Tipp 1</button>
+        <p id="tip1" class="tip">Ein emotionaler und herzzerreißender Abschlusstrack, der ihn würdig verabschiedet – voller Dramatik und Tragik.</p>
+    </div>
+
+    <div>
+        <button onclick="showTip('tip2')">Tipp 2</button>
+        <p id="tip2" class="tip"> <img src="https://www.dropbox.com/scl/fi/hjlapnz1v51bqiqxdhh98/8.jpeg?rlkey=hu6ohywdlygeybqbtbc7gkkw5&dl=1"</p>
+    </div>
+</body>
+</html>
